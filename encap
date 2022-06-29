@@ -1,0 +1,75 @@
+package Encap_demo;
+
+import java.util.Scanner;
+
+public class Bank {
+	
+	private int balance=1000,Acc_no,Deposit_amount;
+	
+	public void set_Acc_no(int newacc)
+	{
+		Acc_no=newacc;
+	}
+	public int get_Acc_no()
+	{
+		return Acc_no;
+	}
+	public void set_Deposit_amount(int newval)
+	{
+		Deposit_amount=newval;
+		
+	}
+	public int get_Deposit_amount()
+	{
+		return balance;
+	}
+	public void calc()
+	{
+		balance=balance+Deposit_amount;
+	}		
+	}
+	
+
+-------------------------------------------------------------------
+package Encap_demo;
+
+import java.util.Scanner;
+
+public class details {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		details obj1=new details();
+		
+	}
+		
+		public details() {
+			
+			String Name,Bank_name;
+			int phoneno,Acc_no,Deposit_amount;
+			
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter your name: ");
+			Name=sc.next();
+			System.out.println("Enter your phone no:");
+			phoneno=sc.nextInt();
+			System.out.println("Enter your Bank name: ");
+			Bank_name=sc.next();
+			System.out.println("Enter your Account no:");
+			Acc_no=sc.nextInt();
+			System.out.println("Enter the amount you want to deposit:");
+			Deposit_amount=sc.nextInt();
+			
+			Bank obj=new Bank();
+			
+			obj.set_Acc_no(Acc_no);
+			System.out.println("Account no:" +obj.get_Acc_no());
+			obj.set_Deposit_amount(Deposit_amount);
+			obj.calc();
+			System.out.println("The final amount:" +obj.get_Deposit_amount());
+			
+			
+
+	}
+
+}
